@@ -21,7 +21,10 @@ router.post('/', async (req, res, next) => {
 	}
 });
 
+function slug(title){
+	return title.replace(/\s+/g, "")
 
+}
 
 router.get('/add', (req, res, next) => {
 	res.send(addPage());
