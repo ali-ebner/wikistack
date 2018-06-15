@@ -6,6 +6,8 @@ const { db } = require('./models');
 const models  = require('./models');
 const layout = require("./views/layout")
 
+
+
 db.authenticate().
 then(() => {
   console.log('connected to the database');
