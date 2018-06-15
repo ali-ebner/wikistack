@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const addPage = require('../views/addPage');
-const { Page } =require("../models")
+const { Page } = require("../models")
+const layout = require("../views/layout")
 
 router.get('/', (req, res, next) => {
-	res.send('');
+	res.send(layout());
 });
 
 router.post('/', async (req, res, next) => {
