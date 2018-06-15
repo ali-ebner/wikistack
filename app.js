@@ -5,6 +5,9 @@ const app = express()
 const { db } = require('./models');
 const models  = require('./models');
 const layout = require("./views/layout")
+const wikiRouter = require('./routes/wiki')
+const userRouter = require('./routes/user');
+
 
 db.authenticate().
 then(() => {
@@ -26,7 +29,8 @@ const init = async () =>{
 
 init()
 
-
-app.get("/", (req,res) =>{
-  res.send(layout(""))
+app.get('/', (req, res, next) => {
+	res.redirect('/wiki');
 })
+app.use('/wiki', wikiRouter);
+app.use('/user', userRouter);
