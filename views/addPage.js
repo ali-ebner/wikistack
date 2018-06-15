@@ -6,14 +6,18 @@ module.exports = () => layout(html`
   <hr>
   <form method="POST" action="/wiki/">
     
-    <div>
-      <label> Author </label>
-      <input id="author" name="author" type="text"
+    <div class="form-group">
+      <label for="title" class="col-sm-2 control-label"> Author </label>
+      <div class="col-sm-10">
+      <input id="author" name="author" type="text" class="form-control"</input>
+      </div>
       </div>
     
-    <div>
-      <label> Email </label>
-      <input id='email' name="email" type="text"</input>
+    <div class="form-group">
+      <label for="title" class="col-sm-2 control-label"> Email </label>
+      <div class="col-sm-10">
+      <input id='email' name="email" type="text" class="form-control"</input>
+      </div>
     </div>
     
     <div class="form-group">
@@ -23,14 +27,18 @@ module.exports = () => layout(html`
       </div>
     </div>
 
-    <div>
-    <label> Content </label>
-      <input id='content' name="content" type="text"</input>
+    <div class="form-group">
+    <label for="title" class="col-sm-2 control-label"> Content </label>
+    <div class="col-sm-10">
+      <textarea id='content' name="content" type="text" class="form-control" rows="4"></textarea>
+      </div>
     </div>
     
-    <div>
-    <label> Status </label>
-      <input id='status' name="status" type="text"</input>
+    <div class="form-group">
+    <label for="title" class="col-sm-2 control-label"> Status </label>
+    <div class="col-sm-10">
+      <input id='status' name="status" type="text" class="form-control"</input>
+      </div>
     </div>
 
     <div class="col-sm-offset-2 col-sm-10">
